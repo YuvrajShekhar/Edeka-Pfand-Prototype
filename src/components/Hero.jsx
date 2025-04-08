@@ -6,7 +6,7 @@ const Hero = () => {
         <p className='text-[#000000] font-bold p-2'>Bearlocal</p>
         <h1 className='md:text-7xl sm:text-6xl text-4xl font-bold md:py-6'>Bearlocal</h1>
         <div>
-            <p className='md:text-5xl sm:text-4xl text-xl font-bold'>Bearlocla Test text 3</p>
+            <p className='md:text-5xl sm:text-4xl text-xl font-bold'>Bearlocal Test text 3</p>
         </div>
         <p className='md:text-2xl text-xl font-bold test-gray-500'>Test lorem ipsum text random generated ones</p>
     </div>
