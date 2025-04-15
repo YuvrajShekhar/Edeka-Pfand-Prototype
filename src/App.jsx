@@ -14,7 +14,7 @@ function App() {
 
         <BarcodeGenerator />
       </div>
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
