@@ -53,6 +53,7 @@ The barcode encodes:
 
 ## 📂 Project Structure
 
+```bash
 src/
 ├── assets/
 │   ├── Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf  # Documentation for the Algorithm version 1.01
@@ -65,6 +66,7 @@ src/
 │   └── StoreSelector.jsx   # EDEKA store switcher
 ├── App.jsx                 # Main component
 └── main.jsx                # React entry point
+```
 
 ## 📜 Algorithm Documentation
 See /src/assets/Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf for detailed barcode generation rules.
