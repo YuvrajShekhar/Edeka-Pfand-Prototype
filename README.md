@@ -2,7 +2,6 @@
 
 ![React](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
 ![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
-![Vite](https://img.shields.io/badge/Vite-B73BFE?style=for-the-badge&logo=vite&logoColor=FFD62E)
 
 A React web app that generates **scannable EDEKA bottle deposit (Pfand) barcodes** for store returns.
 
@@ -15,7 +14,7 @@ A React web app that generates **scannable EDEKA bottle deposit (Pfand) barcodes
 ✔ **Copy to Clipboard**
 
 
-🚀 Quick Start
+## 🚀 Quick Start
 
 **Clone the repo**
 
@@ -26,37 +25,38 @@ cd edeka-pfand-generator
 
 **Install dependencies**
 
-bash
-Copy
+```bash
 npm install
-Run the app
+```
 
-bash
-Copy
+**Run the app**
+
+```bash
 npm run dev
-Open in browser
+```
+
+**Open in browser**
 → http://localhost:5173
 
-🔧 How It Works
+## 🔧 How It Works
+
 The barcode encodes:
+1.Store prefix (98409456 or 98409452)
+2.Receipt number (zero-padded to 3 digits)
+3.Date (as day-of-year + 20 prefix)
+4.Refund amount (encoded differently for ≤€1.00 and >€1.00)
+5.Checksum (last 2 digits of receipt_number × 3)
 
-Store prefix (98409456 or 98409452)
-
-Receipt number (zero-padded to 3 digits)
-
-Date (as day-of-year + 20 prefix)
-
-Refund amount (encoded differently for ≤€1.00 and >€1.00)
-
-Checksum (last 2 digits of receipt_number × 3)
-
-Example:
+**Example:**
 98409456 (Store 1) + 062 (Receipt) + 2087 (March 28) + 1005 (€1.00) + 86 (Checksum)
 → 984094560622087100586
 
-📂 Project Structure
-Copy
+## 📂 Project Structure
+
 src/
+├── assets/
+│   ├── Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf  # Documentation for the Algorithm version 1.01
+│   ├── Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf  # Documentation for the Algorithm version 1.00
 ├── components/
 │   ├── BarcodeDisplay.jsx  # Shows scannable barcode
 │   ├── DateInput.jsx       # Date picker
@@ -65,24 +65,15 @@ src/
 │   └── StoreSelector.jsx   # EDEKA store switcher
 ├── App.jsx                 # Main component
 └── main.jsx                # React entry point
-📜 Algorithm Documentation
-See ALGORITHM.md for detailed barcode generation rules.
 
-📄 License
-MIT © [Your Name]
+## 📜 Algorithm Documentation
+See /src/assets/Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf for detailed barcode generation rules.
 
-💡 Tip: Scan the generated barcode at EDEKA bottle return machines!
+## 🎯 Usage Example
 
-<div align="center"> <sub>Built with React + Vite + Tailwind CSS</sub> </div>
-🎯 Usage Example
-Select store (EDEKA 1 or 2)
-
-Enter receipt number (e.g., 62)
-
-Pick date (e.g., March 28, 2025)
-
-Select refund amount (e.g., €1.00)
-
-Click "Generate Barcode"
-
-Scan the barcode at an EDEKA return machine!"
+1. Select store (EDEKA 1 or 2)
+2. Enter receipt number (e.g., 62)
+3. Pick date (e.g., March 28, 2025)
+4. Select refund amount (e.g., €1.00)
+5. Click "Generate Barcode"
+6. Scan the barcode at an EDEKA return machine!"
