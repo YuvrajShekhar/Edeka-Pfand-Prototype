@@ -22,8 +22,9 @@ A React web app that generates **scannable EDEKA bottle deposit (Pfand) barcodes
 ```bash
 git clone https://github.com/yourusername/edeka-pfand-generator.git
 cd edeka-pfand-generator
+```
 
-Install dependencies
+**Install dependencies**
 
 bash
 Copy
