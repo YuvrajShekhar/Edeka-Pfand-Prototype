@@ -41,11 +41,12 @@ npm run dev
 ## 🔧 How It Works
 
 The barcode encodes:
-1.Store prefix (98409456 or 98409452)
-2.Receipt number (zero-padded to 3 digits)
-3.Date (as day-of-year + 20 prefix)
-4.Refund amount (encoded differently for ≤€1.00 and >€1.00)
-5.Checksum (last 2 digits of receipt_number × 3)
+
+1. Store prefix (98409456 or 98409452)
+2. Receipt number (zero-padded to 3 digits)
+3. Date (as day-of-year + 20 prefix)
+4. Refund amount (encoded differently for ≤€1.00 and >€1.00)
+5. Checksum (last 2 digits of receipt_number × 3)
 
 **Example:**
 98409456 (Store 1) + 062 (Receipt) + 2087 (March 28) + 1005 (€1.00) + 86 (Checksum)
