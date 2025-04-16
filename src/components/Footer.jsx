@@ -1,6 +1,6 @@
 // Footer.jsx
 import React from 'react';
-import pdf from "../assets/Edeka_Pfand_Barcode_Algo_Breakdown.pdf";
+import pdf from "../assets/Edeka_Pfand_Barcode_Algo_Breakdown_v1.01.pdf";
 
 const Footer = () => {
   return (
